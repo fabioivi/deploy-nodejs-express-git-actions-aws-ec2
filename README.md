@@ -1,6 +1,6 @@
 # README
 
-[![NodeJS CI CD](https://github.com/fabioivi/express-hello-world-github-actions/actions/workflows/main.yml/badge.svg)](https://github.com/fabioivi/express-hello-world-github-actions/actions/workflows/main.yml)
+[![NodeJS CI CD](https://github.com/fabioivi/deploy-nodejs-express-git-actions-aws-ec2/actions/workflows/main.yml/badge.svg)](https://github.com/fabioivi/deploy-nodejs-express-git-actions-aws-ec2/actions/workflows/main.yml)
 
 This is the [Express](https://expressjs.com) [Hello world](https://expressjs.com/en/starter/hello-world.html) example
 
