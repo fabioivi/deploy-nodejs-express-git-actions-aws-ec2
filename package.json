@@ -1,0 +1,30 @@
+{
+  "name": "express-hello-world",
+  "version": "1.0.0",
+  "description": "Express Hello World on Render",
+  "main": "app.js",
+  "repository": "https://github.com/render-examples/express-hello-world",
+  "author": "Render Developers",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
