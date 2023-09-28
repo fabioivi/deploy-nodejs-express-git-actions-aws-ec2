@@ -41,4 +41,16 @@ jobs:
           TARGET: ${{ secrets.TARGET }}
           SOURCE: ""
 
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+              # sudo npm install pm2 -g && pm2 update
+              cd /backend
+              # sudo pm2 start index.js --name=backend 
+              sudo pm2 restart backend
+
           
