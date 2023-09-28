@@ -48,9 +48,9 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-              # sudo npm install pm2 -g && pm2 update
-              cd /backend
-              # sudo pm2 start index.js --name=backend 
-              sudo pm2 restart backend
+              # npm install pm2 -g && pm2 update
+              cd /home/ec2-user/backend/
+              # pm2 start index.js --name=backend 
+              pm2 restart backend
 
           
