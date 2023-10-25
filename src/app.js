@@ -29,6 +29,13 @@ app.get('/aws', (req, res) => {
   });
 });
 
+app.get('/awstest', (req, res) => {
+  res.status(200).json({
+    message: "Servidor AWS Funcionando.."
+  });
+});
+
+
 module.exports = { app };
 
 const html = `
