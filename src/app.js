@@ -19,7 +19,7 @@ app.get('/hello', (req, res) => {
 
 app.get('/test', (req, res) => {
   res.status(200).json({
-    message: "Servidor Funcionando......"
+    message: "Servidor Funcionando......."
   });
 });
 
