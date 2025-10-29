@@ -23,15 +23,15 @@ app.get('/test', (req, res) => {
   });
 });
 
-app.get('/aws', (req, res) => {
+app.get('/vps', (req, res) => {
   res.status(200).json({
-    message: "Servidor AWS Funcionando... OK"
+    message: "Servidor VPS Funcionando... OK"
   });
 });
 
-app.get('/awstest', (req, res) => {
+app.get('/vpstest', (req, res) => {
   res.status(200).json({
-    message: "Servidor AWS Funcionando..."
+    message: "Servidor VPS Funcionando..."
   });
 });
 
@@ -83,7 +83,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello Express API V 1.0
+      VPS - Hello Express API V 1.1 - Fábio Duarte
     </section>
   </body>
 </html>
