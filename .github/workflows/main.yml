@@ -32,7 +32,7 @@ jobs:
       - name: Run testes
         run: yarn test
 
-      - name: Deploy to EC2 instance
+      - name: Deploy to VPS instance
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
