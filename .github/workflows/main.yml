@@ -49,7 +49,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
               # npm install pm2 -g && pm2 update
-              cd /home/ec2-user/backend/
+              cd ~/sites/express-hello-world/
               # pm2 start index.js --name=backend 
               pm2 restart backend
 
