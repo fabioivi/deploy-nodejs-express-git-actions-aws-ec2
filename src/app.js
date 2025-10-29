@@ -83,7 +83,7 @@ const html = `
   </head>
   <body>
     <section>
-      VPS - Hello Express API V 1.1 - Fábio Duarte
+      VPS - Hello Express API V 1.2
     </section>
   </body>
 </html>
