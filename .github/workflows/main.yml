@@ -46,7 +46,7 @@ jobs:
             cd /root/sites/deploy-nodejs-express-git-actions-aws-ec2
             ls -al
             git pull origin main
-            yarn install --production
+            yarn install
             pm2 restart all
 
 
