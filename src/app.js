@@ -35,6 +35,18 @@ app.get('/vpstest', (req, res) => {
   });
 });
 
+app.get('/crash', (req, res) => {
+  console.log('Simulando crash para teste de self-healing...');
+  
+  // Causa um erro não tratado para derrubar o processo
+  setImmediate(() => {
+    throw new Error('Crash intencional: Simulando falha crítica!');
+  });
+  
+  // Resposta assíncrona para não bloquear (o erro será lançado após a resposta)
+  res.status(500).json({ message: 'Crash simulado iniciado. O app deve reiniciar via PM2.' });
+});
+
 
 module.exports = { app };
 
