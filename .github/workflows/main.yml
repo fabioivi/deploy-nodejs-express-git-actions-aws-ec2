@@ -32,26 +32,18 @@ jobs:
       - name: Run testes
         run: yarn test
 
-      - name: Deploy to VPS instance
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.TARGET }}
-          SOURCE: "."
-
-      - name: Executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ 22 }}
           script: |
-              # npm install pm2 -g && pm2 update
-              source /root/.nvm/nvm.sh
-              cd sites/express-hello-world/ && pm2 restart backend
-              # pm2 start index.js --name=backend 
-              # pm2 restart backend
+            cd /root/sites/
+            git pull origin main
+            yarn install --production
+            pm2 restart all
+
 
           
