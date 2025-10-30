@@ -41,8 +41,10 @@ jobs:
           port: ${{ 22 }}
           script: |
             whoami
-            ls -al
+            export NVM_DIR="$HOME/.nvm"
+            source "$NVM_DIR/nvm.sh"
             cd /root/sites/deploy-nodejs-express-git-actions-aws-ec2
+            ls -al
             git pull origin main
             yarn install --production
             pm2 restart all
