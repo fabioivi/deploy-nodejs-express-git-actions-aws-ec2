@@ -40,7 +40,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ 22 }}
           script: |
-            cd /root/sites/
+            whoami
+            ls -al
+            cd /root/sites/deploy-nodejs-express-git-actions-aws-ec2
             git pull origin main
             yarn install --production
             pm2 restart all
